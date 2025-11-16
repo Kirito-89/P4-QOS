@@ -1,0 +1,8 @@
+# The QoS Rule
+table_add MyIngress.qos_classify set_high_priority 0xb8 =>
+
+# The L2 Forwarding Rules for s1
+table_add MyIngress.l2_forward set_egress_port 00:00:00:00:00:01 => 1
+table_add MyIngress.l2_forward set_egress_port 00:00:00:00:00:02 => 2
+table_add MyIngress.l2_forward set_egress_port 00:00:00:00:00:03 => 3
+table_add MyIngress.l2_forward set_egress_port 00:00:00:00:00:04 => 3

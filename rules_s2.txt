@@ -1,0 +1,5 @@
+# The L2 Forwarding Rules for s2
+table_add MyIngress.l2_forward set_egress_port 00:00:00:00:00:01 => 3
+table_add MyIngress.l2_forward set_egress_port 00:00:00:00:00:02 => 3
+table_add MyIngress.l2_forward set_egress_port 00:00:00:00:00:03 => 1
+table_add MyIngress.l2_forward set_egress_port 00:00:00:00:00:04 => 2

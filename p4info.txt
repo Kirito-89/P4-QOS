@@ -1,0 +1,45 @@
+# proto-file: p4/config/v1/p4info.proto
+# proto-message: p4.config.v1.P4Info
+
+pkg_info {
+  arch: "v1model"
+}
+tables {
+  preamble {
+    id: 38330756
+    name: "MyIngress.qos_classify"
+    alias: "qos_classify"
+  }
+  match_fields {
+    id: 1
+    name: "hdr.ipv4.diffserv"
+    bitwidth: 8
+    match_type: EXACT
+  }
+  action_refs {
+    id: 28720546
+  }
+  action_refs {
+    id: 30678933
+  }
+  initial_default_action {
+    action_id: 30678933
+  }
+  size: 64
+}
+actions {
+  preamble {
+    id: 28720546
+    name: "MyIngress.set_high_priority"
+    alias: "set_high_priority"
+  }
+}
+actions {
+  preamble {
+    id: 30678933
+    name: "MyIngress.set_low_priority"
+    alias: "set_low_priority"
+  }
+}
+type_info {
+}
